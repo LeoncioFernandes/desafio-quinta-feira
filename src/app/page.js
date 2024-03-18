@@ -1,7 +1,85 @@
+'use client'
+
+import { useState } from "react";
 import Card from "@/components/Card";
+import ModalCarrinho from "@/components/ModalCarrinho";
 import { FaShoppingCart } from "react-icons/fa"
 
 export default function Home() {
+
+  //ADD ITENS NO CARRINHO
+  const [cartItems, setCartItems] = useState([]);
+  const addCarrinho = (itemId) => {
+    setCartItems([...cartItems, itemId]);
+  };
+
+  //ABRIR MODAL
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  function handleOpenModal() {
+    setIsModalOpen(true);
+  }
+    
+  //ARRAY DE ITENS
+  const cards = [
+    {
+      id: 1, 
+      imagem: "../imgs/imgsCards/img01.png",
+      titulo: "Cheese Burger Duplo",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+    {
+      id: 2,
+      imagem: "../imgs/imgsCards/img02.png",
+      titulo: "Cheese Burger",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+    {
+      id: 3,
+      imagem: "../imgs/imgsCards/img03.png",
+      titulo: "Smash Burger",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+    {
+      id: 4,
+      imagem: "../imgs/imgsCards/img04.png",
+      titulo: "Cheese Bacon",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+    {
+      id: 5, 
+      imagem: "../imgs/imgsCards/img05.png",
+      titulo: "Cheese Burger",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+    {
+      id: 6, 
+      imagem: "../imgs/imgsCards/img06.png",
+      titulo: "Cheese Burger",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+    {
+      id: 7, 
+      imagem: "../imgs/imgsCards/img07.png",
+      titulo: "Cheese Burger Duplo",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+    {
+      id: 8, 
+      imagem: "../imgs/imgsCards/img08.png",
+      titulo: "Pastel De Queijo",
+      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
+      preco: "R$ 35,00"
+    },
+  ]
+  
+
   return (
     <>
       {/* FIXAR O RODAPÉ */}
@@ -10,7 +88,7 @@ export default function Home() {
         {/* CABEÇALHO */}
         <div>
           <div className=" relative flex flex-col items-center ">
-            <img className="object-cover w-[1440px] h-[456px]" src="../imgs/bg.png" />
+            <img className="object-cover w-full h-[456px]" src="../imgs/bg.png" />
             <div className="absolute mt-[51px]">
               <div className="flex flex-col gap-4 items-center text-[#FFFFFF]">
                 <img className="object-cover h-[185px] w-[185px] rounded-full" src="../imgs/bg-pop.png"></img>
@@ -29,63 +107,28 @@ export default function Home() {
 
         {/* CARDS */}
         <div className="flex flex-col items-center pb-20 gap-5 xl:flex-row flex-wrap justify-center">
-          <Card
-            imagem="../imgs/imgsCards/img01.png"
-            titulo="Cheese Burger Duplo"
-            texto="Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa"
-            preco="R$ 35,00">
-          </Card>
-          <Card
-            imagem="../imgs/imgsCards/img02.png"
-            titulo="Cheese Burger"
-            texto="Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa"
-            preco="R$ 35,00">
-          </Card>
-          <Card
-            imagem="../imgs/imgsCards/img03.png"
-            titulo="Smash Burger"
-            texto="Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa"
-            preco="R$ 35,00">
-          </Card>
-          <Card
-            imagem="../imgs/imgsCards/img04.png"
-            titulo="Cheese Bacon"
-            texto="Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa"
-            preco="R$ 35,00">
-          </Card>
-          <Card
-            imagem="../imgs/imgsCards/img05.png"
-            titulo="Cheese Burger"
-            texto="Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa"
-            preco="R$ 35,00">
-          </Card>
-          <Card
-            imagem="../imgs/imgsCards/img06.png"
-            titulo="Cheese Burger"
-            texto="Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa"
-            preco="R$ 35,00">
-          </Card>
-          <Card
-            imagem="../imgs/imgsCards/img07.png"
-            titulo="Cheese Burger"
-            texto="Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa"
-            preco="R$ 35,00">
-          </Card>
-          <Card
-            imagem="../imgs/imgsCards/img08.png"
-            titulo="Pastel De Queijo"
-            texto="Massa crocante e queijo mussarela"
-            preco="R$ 35,00">
-          </Card>
+          {cards.map((item) => (
+            <Card 
+              key={item.id}
+              imagem={item.imagem}
+              titulo={item.titulo}
+              texto={item.texto}
+              preco={item.preco}
+              addCarrinho={addCarrinho}
+            /> 
+          ))}
         </div>
 
         {/* RODAPÉ */}
         <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center h-[60px] bg-[#FF3131] text-[#FFFFFF]">
-          <button className="flex flex-row items-center gap-[8px]">
-            <p className="roboto-bold text-[14px]">( 1 ) Veja seu carrinho</p>
+          <button onClick={handleOpenModal} className="flex flex-row items-center gap-[8px]">
+            <p className="roboto-bold text-[14px]">( {cartItems.length} ) Veja seu carrinho</p>
             <FaShoppingCart className="w-[25px] h-[25px]" />
           </button>
         </div>
+
+        {/* Renderização do modal */}
+        {isModalOpen && <ModalCarrinho closeModal={() => setIsModalOpen(false)} />}
         
       </div>
     </> 
