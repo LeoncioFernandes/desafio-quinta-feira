@@ -60,6 +60,7 @@ export default function ModalCarrinho({closeModal, itensCarrinho, remover}){
                       .filter(item => carrinho.includes(item.id))
                       .map((item) => (
                         <ModalPedidos
+                        key={item.id}
                         id={item.id}
                         titulo={item.titulo}
                         quantidade={countMap[item.id]}
