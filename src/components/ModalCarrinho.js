@@ -23,6 +23,9 @@ export default function ModalCarrinho({closeModal, itensCarrinho, remover}){
       remover(itemId)
   };
 
+  // Filtrando os itens que estão no carrinho
+  const itensNoCarrinho = Itens().filter(item => carrinho.includes(item.id));
+
     return(
       <Transition appear show={true} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -55,19 +58,25 @@ export default function ModalCarrinho({closeModal, itensCarrinho, remover}){
                     <Dialog.Title as="h3" className="w-full h-[38px] roboto-bold text-[24px] text-[#000000]">
                       Seu carrinho
                     </Dialog.Title>
-                    <div className='w-full h-[250px] overflow-auto pr-[10px]'>
-                      {Itens()
-                      .filter(item => carrinho.includes(item.id))
-                      .map((item) => (
-                        <ModalPedidos
-                        key={item.id}
-                        id={item.id}
-                        titulo={item.titulo}
-                        quantidade={countMap[item.id]}
-                        total={(parseFloat(item.preco) * (countMap[item.id])).toLocaleString(undefined, {minimumFractionDigits: 2})}
-                        removerCarrinho={() => removerCarrinho(item.id)}
-                      />
-                      ))}
+                    <div className='w-full h-[250px] overflow-auto'>
+                      {itensNoCarrinho.length > 0 ? (
+                        itensNoCarrinho.map((item) => (
+                          <div className='px-[5px]'>
+                            <ModalPedidos
+                            key={item.id}
+                            id={item.id}
+                            titulo={item.titulo}
+                            quantidade={countMap[item.id]}
+                            total={(parseFloat(item.preco) * (countMap[item.id])).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                            removerCarrinho={() => removerCarrinho(item.id)}
+                          />
+                          </div>
+                        ))
+                      ) : (
+                        <div className='flex items-center justify-center w-full h-full'>
+                          <p className='roboto-bold text-[20px] text-[#000000]'>Seu carrinho está vazio</p>
+                        </div>
+                      )}
                     </div>
                   </div>
                   
