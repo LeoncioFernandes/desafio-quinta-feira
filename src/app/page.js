@@ -29,11 +29,11 @@ export default function Home() {
   return (
     <>
       {/* FIXAR O RODAPÉ */}
-      <div className="relative">
+      <div className="relative flex flex-col items-center">
 
         {/* CABEÇALHO */}
-        <div>
-          <div className=" relative flex flex-col items-center ">
+        <div className="w-full">
+          <div className="relative flex flex-col items-center ">
             <img className="object-cover w-full h-[456px]" src="../imgs/bg.png" />
             <div className="absolute mt-[51px]">
               <div className="flex flex-col gap-4 items-center text-[#FFFFFF]">
@@ -52,19 +52,22 @@ export default function Home() {
         </div>
 
         {/* CARDS */}
-        <div className="flex flex-col items-center pb-20 gap-5 xl:flex-row flex-wrap justify-center">
-          {Itens().map((item) => (
-            <Card 
-              key={item.id}
-              idItem={item.id}
-              imagem={item.imagem}
-              titulo={item.titulo}
-              texto={item.texto}
-              preco={item.preco}
-              addCarrinho={addCarrinho}
-            /> 
-          ))}
+        <div className="w-full sm:w-[1300px]">
+          <div className="flex flex-col items-center pb-20 gap-5 xl:flex-row flex-wrap justify-center">
+            {Itens().map((item) => (
+              <Card 
+                key={item.id}
+                idItem={item.id}
+                imagem={item.imagem}
+                titulo={item.titulo}
+                texto={item.texto}
+                preco={item.preco}
+                addCarrinho={addCarrinho}
+              /> 
+            ))}
+          </div>
         </div>
+        
 
         {/* RODAPÉ */}
         <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center h-[60px] bg-[#FF3131] text-[#FFFFFF]">
