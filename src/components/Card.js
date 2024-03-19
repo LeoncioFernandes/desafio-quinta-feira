@@ -14,7 +14,7 @@ export default function Card({id, imagem, titulo, texto, preco, addCarrinho}){
                 </div>
                 <div className="absolute bottom-0 right-0 w-[270px] sm:w-[468px]">
                     <div className="flex flex-row justify-between px-3 pt-2">
-                        <h1 className="roboto-medium text-[16px] sm:text-[18px]">{preco}</h1>
+                        <h1 className="roboto-medium text-[16px] sm:text-[18px]">R$ {preco}</h1>
                         <button onClick={() => addCarrinho(id)} className="flex w-[45px] h-[25px] items-center justify-center rounded-[4px] bg-[#000000] text-[#FFFFFF]">
                             <FaCartPlus className="w-[19px] h-[17.22px]"/>
                         </button>

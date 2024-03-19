@@ -4,6 +4,7 @@ import { useState } from "react";
 import Card from "@/components/Card";
 import ModalCarrinho from "@/components/ModalCarrinho";
 import { FaShoppingCart } from "react-icons/fa"
+import Itens from "@/components/Itens";
 
 export default function Home() {
 
@@ -13,73 +14,18 @@ export default function Home() {
     setCartItems([...cartItems, itemId]);
   };
 
+  //REMOVER ITENS DO CARRINHO
+  const removerCarrinho = (itemId) => {
+    const novoCarrinho = cartItems.filter((item) => item !== itemId);
+    setCartItems([...novoCarrinho]);
+};
+
   //ABRIR MODAL
   const [isModalOpen, setIsModalOpen] = useState(false);
   function handleOpenModal() {
     setIsModalOpen(true);
   }
     
-  //ARRAY DE ITENS
-  const cards = [
-    {
-      id: 1, 
-      imagem: "../imgs/imgsCards/img01.png",
-      titulo: "Cheese Burger Duplo",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-    {
-      id: 2,
-      imagem: "../imgs/imgsCards/img02.png",
-      titulo: "Cheese Burger",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-    {
-      id: 3,
-      imagem: "../imgs/imgsCards/img03.png",
-      titulo: "Smash Burger",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-    {
-      id: 4,
-      imagem: "../imgs/imgsCards/img04.png",
-      titulo: "Cheese Bacon",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-    {
-      id: 5, 
-      imagem: "../imgs/imgsCards/img05.png",
-      titulo: "Cheese Burger",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-    {
-      id: 6, 
-      imagem: "../imgs/imgsCards/img06.png",
-      titulo: "Cheese Burger",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-    {
-      id: 7, 
-      imagem: "../imgs/imgsCards/img07.png",
-      titulo: "Cheese Burger Duplo",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-    {
-      id: 8, 
-      imagem: "../imgs/imgsCards/img08.png",
-      titulo: "Pastel De Queijo",
-      texto: "Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa",
-      preco: "R$ 35,00"
-    },
-  ]
-  
-
   return (
     <>
       {/* FIXAR O RODAPÉ */}
@@ -107,9 +53,10 @@ export default function Home() {
 
         {/* CARDS */}
         <div className="flex flex-col items-center pb-20 gap-5 xl:flex-row flex-wrap justify-center">
-          {cards.map((item) => (
+          {Itens().map((item) => (
             <Card 
               key={item.id}
+              id={item.id}
               imagem={item.imagem}
               titulo={item.titulo}
               texto={item.texto}
@@ -128,7 +75,7 @@ export default function Home() {
         </div>
 
         {/* Renderização do modal */}
-        {isModalOpen && <ModalCarrinho closeModal={() => setIsModalOpen(false)} />}
+        {isModalOpen && <ModalCarrinho closeModal={() => setIsModalOpen(false)} itensCarrinho={cartItems} remover={removerCarrinho}/>}
         
       </div>
     </> 
