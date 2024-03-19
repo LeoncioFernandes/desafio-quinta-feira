@@ -56,7 +56,7 @@ export default function Home() {
           {Itens().map((item) => (
             <Card 
               key={item.id}
-              id={item.id}
+              idItem={item.id}
               imagem={item.imagem}
               titulo={item.titulo}
               texto={item.texto}

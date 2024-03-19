@@ -1,3 +1,5 @@
+'use client'
+
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import ModalPedidos from './ModalPedidos'
@@ -61,15 +63,14 @@ export default function ModalCarrinho({closeModal, itensCarrinho, remover}){
                     <div className='w-full h-[250px] overflow-auto'>
                       {itensNoCarrinho.length > 0 ? (
                         itensNoCarrinho.map((item) => (
-                          <div className='px-[5px]'>
+                          <div className='px-[5px]' key={item.id}>
                             <ModalPedidos
-                            key={item.id}
-                            id={item.id}
-                            titulo={item.titulo}
-                            quantidade={countMap[item.id]}
-                            total={(parseFloat(item.preco) * (countMap[item.id])).toLocaleString(undefined, { minimumFractionDigits: 2 })}
-                            removerCarrinho={() => removerCarrinho(item.id)}
-                          />
+                              idItem={item.id}
+                              titulo={item.titulo}
+                              quantidade={countMap[item.id]}
+                              total={(parseFloat(item.preco) * (countMap[item.id])).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                              removerCarrinho={() => removerCarrinho(item.id)}
+                            />
                           </div>
                         ))
                       ) : (

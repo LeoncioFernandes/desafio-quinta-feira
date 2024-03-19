@@ -1,4 +1,4 @@
-export default function ModalPedidos({id, titulo, quantidade, total, removerCarrinho}){
+export default function ModalPedidos({idItem, titulo, quantidade, total, removerCarrinho}){
 
     return(
         <div className="flex flex-row justify-between items-center mt-2">
@@ -8,7 +8,7 @@ export default function ModalPedidos({id, titulo, quantidade, total, removerCarr
                 <p className="text-[16px] roboto-regular">R$ {total}</p>
             </div>
             <div>
-                <button onClick={() => removerCarrinho(id)} type="button" className="text-[16px] roboto-regular">
+                <button onClick={() => removerCarrinho(idItem)} type="button" className="text-[16px] roboto-regular">
                     Remover
                 </button>
             </div>
