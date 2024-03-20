@@ -40,20 +40,20 @@ export default function Home() {
                 <img className="object-cover h-[185px] w-[185px] rounded-full" src="../imgs/bg-pop.png"></img>
                 <h1 className="inter-bold text-[28px]">Red Burguer</h1>
                 <p className="roboto-regular text-[16px]">Rua dev sucesso, 12, Campo Grande, MS</p>
-                <button className="roboto-bold w-[256px] h-[43px] rounded-[4px] text-[18px] bg-[#54CC0A]">Seg á Dom - 18:00 as 22:00</button>
+                <p className="flex justify-center items-center roboto-bold w-[256px] h-[43px] rounded-[4px] text-[18px] bg-[#54CC0A]">Seg á Dom - 18:00 as 22:00</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* TEXTO CENTRAL */}
-        <div className="flex flex-col items-center py-10">
+        <div className="py-10">
           <h1 className="text-[24px] roboto-bold text-[#000000] sm:text-[34px]">Conheça nosso menu</h1>
         </div>
 
         {/* CARDS */}
-        <div className="w-full sm:w-[1300px]">
-          <div className="flex flex-col items-center pb-20 gap-5 xl:flex-row flex-wrap justify-center">
+        <div className="w-full flex justify-center">
+          <div className="grid grid-cols-1 xl:grid-cols-2 pb-20 gap-5">
             {Itens().map((item) => (
               <Card 
                 key={item.id}
