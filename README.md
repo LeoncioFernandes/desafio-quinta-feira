@@ -1,25 +1,17 @@
+
+<h2 align="center">Projeto de FrontEnd utilizando as tecnologias:</h2>
 <div align="center">
-    <p style="font-size: 22px">Projeto de FrontEnd utilizando as tecnologias:</p>
+    <img height="40px" src="./public/React-icon.svg">
+    <img height="40px" src="./public/next.svg">
+    <img height="40px" src="./public/tailwindcss.svg">
 </div>
 
-<div align="center" style="padding: 10px 0px">
-    <img height="40px" style="margin: 0px 10px" src="./public/React-icon.svg">
-    <img height="40px" style="margin: 0px 10px" src="./public/next.svg">
-    <img height="40px" style="margin: 0px 10px" src="./public/tailwindcss.svg">
-</div>
-
-#
-
-<div align="center" style="padding: 10px 0px 0px 0px">
+<h2 align="center">Visualizar Projeto:</h2>
+<div align="center">
     <a href="https://www.figma.com/file/sdXDv5Pi6qCDBW2Ui9gWD6/Restaurant---Sujeito-Programador-(Community)?type=design&node-id=0-1&mode=design&t=A6gYxnhBlBP4smSv-0">
         <img height="40px" src="./public/figma.svg">
         <p>Clique aqui</p>
     </a>
-</div>
-
-#
-
-<div align="center" style="padding: 10px 0px 00px 0px">
     <a href="https://projeto-menu-carrinho-compras.vercel.app/">
         <img height="40px" src="./public/vercel.svg">
         <p>Clique aqui</p>
