@@ -1,6 +1,5 @@
 <head>
     <link rel="stylesheet" href="README-layout.css">
-    <style>body {background-color: #fefefe; color: #000000; }</style>
 </head>
 
 <body class="flex justify-center">
