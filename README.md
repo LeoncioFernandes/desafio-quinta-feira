@@ -1,4 +1,29 @@
-Link do Figma: https://www.figma.com/file/sdXDv5Pi6qCDBW2Ui9gWD6/Restaurant---Sujeito-Programador-(Community)?type=design&node-id=0-1&mode=design&t=A6gYxnhBlBP4smSv-0
+<head>
+    <link rel="stylesheet" href="README-layout.css">
+    <style>body {background-color: #fefefe; color: #000000; }</style>
+</head>
+
+<body class="flex justify-center">
+    <div class="flex justify-center">
+        <p class=" text-[20px] roboto-bold">Projeto de FrontEnd utilizando as tecnologias:</p>
+    </div>
+    <div class="flex justify-center py-10">
+        <img class="h-[34px] px-3" src="./public/React-icon.svg">
+        <img class="h-[34px] px-3" src="./public/next.svg">
+        <img class="h-[34px] px-3" src="./public/tailwindcss.svg">
+    </div>
+    <p class="flex justify-center text-[20px] roboto-bold pt-3">Visualizar projeto:</p>
+    <div class="flex flex-row justify-center py-10">
+        <a class="flex flex-col items-center px-3" href="https://www.figma.com/file/sdXDv5Pi6qCDBW2Ui9gWD6/Restaurant---Sujeito-Programador-(Community)?type=design&node-id=0-1&mode=design&t=A6gYxnhBlBP4smSv-0">
+            <img class="h-[34px]" src="./public/figma.svg">
+            <p>Clique aqui</p>
+        </a>
+        <a class="flex flex-col items-center px-3" href="https://projeto-menu-carrinho-compras.vercel.app/">
+            <img class="h-[34px]" src="./public/vercel.svg">
+            <p>Clique aqui</p>
+        </a>
+    </div>
+</body>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
