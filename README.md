@@ -1,5 +1,5 @@
-<div align="center" style="font-size: 22px">
-    <p>Projeto de FrontEnd utilizando as tecnologias:</p>
+<div align="center">
+    <p style="font-size: 22px">Projeto de FrontEnd utilizando as tecnologias:</p>
 </div>
 
 <div align="center" style="padding: 10px 0px">
