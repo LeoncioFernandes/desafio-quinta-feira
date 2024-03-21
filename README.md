@@ -1,58 +1,45 @@
 
-<h2 align="center">Projeto de FrontEnd utilizando as tecnologias:</h2>
+## 📘 Sobre
+    Este é um projeto FrontEnd realizado na IMERSÃO DA FÁBRICA DE SOFTWARE DE UNIPÊ, em 2024.1, com o objetivo de conhecer e trabalhar as tecnologias:
 <div align="center">
-    <img height="40px" src="./public/React-icon.svg">
-    <img height="40px" src="./public/next.svg">
-    <img height="40px" src="./public/tailwindcss.svg">
+    <a href="https://react.dev/"></p><img height="40px" src="./public/React-icon.svg"></p></a>
+    <a href="https://nextjs.org/"><img height="40px" src="./public/next.svg"></p></a>
+    <a href="https://tailwindcss.com/"><img height="40px" src="./public/tailwindcss.svg"></p></a>
 </div>
 
-<h2 align="center">Visualizar Projeto:</h2>
+    Foi desenvolvido um MENU de uma lanchonete onde o cliente seleciona os produtos que deseja e coloca no carrinho de compras. O carrinho é totalmente funcional, podendo acrescentar e retirar os produtos.
+
+    Também foi realizada a responsividade do site, sendo ajustado automaticamente para diversos tipos de telas.
+
+## 👁️ Visualizar projeto
+    Veja os protótipos do projeto e o Deploy nos links abaixo:
+
 <div align="center">
     <a href="https://www.figma.com/file/sdXDv5Pi6qCDBW2Ui9gWD6/Restaurant---Sujeito-Programador-(Community)?type=design&node-id=0-1&mode=design&t=A6gYxnhBlBP4smSv-0">
+        <p>Protótipos</p>
         <img height="40px" src="./public/figma.svg">
-        <p>Clique aqui</p>
+        </p>
     </a>
     <a href="https://projeto-menu-carrinho-compras.vercel.app/">
+        <p>Deploy</p>
         <img height="40px" src="./public/vercel.svg">
-        <p>Clique aqui</p>
+        </p>
     </a>
 </div>
 
-#
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## 🔑 Dependências
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install react react-dom
+
+npm install @headlessui/react
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏁 Iniciar projeto localmente
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    Após baixado o projeto e instaladas as dependências, digite em seu terminal:
+```bash
+npm run dev
+```
+    Depois abra o [http://localhost:3000](http://localhost:3000) em seu navegador para visualizar o resultado.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
