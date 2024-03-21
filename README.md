@@ -4,11 +4,11 @@
 
 <div align="center">
     <br>
-    <a href="https://react.dev/"><img height="40px" src="./public/React-icon.svg"></a>
+    <a href="https://react.dev/"><img height="40px" src="./public/React-icon.svg" target="_blank"></a>
     <br><br>
-    <a href="https://nextjs.org/"><img height="40px" src="./public/next.svg"></a>
+    <a href="https://nextjs.org/"><img height="40px" src="./public/next.svg" target="_blank"></a>
     <br><br>
-    <a href="https://tailwindcss.com/"><img height="40px" src="./public/tailwindcss.svg"></a>
+    <a href="https://tailwindcss.com/"><img height="40px" src="./public/tailwindcss.svg" target="_blank"></a>
     <br><br>
 </div>
 
@@ -23,13 +23,13 @@
 
 <div align="center">
     <br>
-    <a href="https://www.figma.com/file/sdXDv5Pi6qCDBW2Ui9gWD6/Restaurant---Sujeito-Programador-(Community)?type=design&node-id=0-1&mode=design&t=A6gYxnhBlBP4smSv-0">
+    <a href="https://www.figma.com/file/sdXDv5Pi6qCDBW2Ui9gWD6/Restaurant---Sujeito-Programador-(Community)?type=design&node-id=0-1&mode=design&t=A6gYxnhBlBP4smSv-0" target="_blank">
         Protótipos
         <br>
         <img height="40px" src="./public/figma.svg">
     </a>
     <br><br>
-    <a href="https://projeto-menu-carrinho-compras.vercel.app/">
+    <a href="https://projeto-menu-carrinho-compras.vercel.app/" target="_blank">
         Deploy
         <br>
         <img height="40px" src="./public/vercel.svg">
