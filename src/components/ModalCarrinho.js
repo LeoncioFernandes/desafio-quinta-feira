@@ -60,18 +60,17 @@ export default function ModalCarrinho({closeModal, itensCarrinho, remover}){
                     <Dialog.Title as="h3" className="w-full h-[38px] roboto-bold text-[24px] text-[#000000]">
                       Seu carrinho
                     </Dialog.Title>
-                    <div className='w-full h-[250px] overflow-auto'>
+                    <div className='w-full h-[250px] overflow-auto px-[5px]'>
                       {itensNoCarrinho.length > 0 ? (
                         itensNoCarrinho.map((item) => (
-                          <div className='px-[5px]' key={item.id}>
-                            <ModalPedidos
-                              idItem={item.id}
-                              titulo={item.titulo}
-                              quantidade={countMap[item.id]}
-                              total={(parseFloat(item.preco) * (countMap[item.id])).toLocaleString(undefined, { minimumFractionDigits: 2 })}
-                              removerCarrinho={() => removerCarrinho(item.id)}
-                            />
-                          </div>
+                          <ModalPedidos
+                            key={item.id}
+                            idItem={item.id}
+                            titulo={item.titulo}
+                            quantidade={countMap[item.id]}
+                            total={(parseFloat(item.preco) * (countMap[item.id])).toLocaleString(undefined, { minimumFractionDigits: 2 })}
+                            removerCarrinho={() => removerCarrinho(item.id)}
+                          /> 
                         ))
                       ) : (
                         <div className='flex items-center justify-center w-full h-full'>
