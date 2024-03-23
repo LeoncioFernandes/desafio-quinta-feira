@@ -13,8 +13,7 @@ export default function ModalCarrinho({openModal, closeModal, idsItensCarrinho, 
   // CONTAGEM DE ITENS POR QUANTIDADE DE IDs SELECIONADOS (IDs REPETIDOS)
   const countMap = {}
   idsItensCarrinho.forEach(idRep => {
-      const matchingItem = Itens().find(item => item.id === idRep);
-      if(matchingItem){
+      if(itensNoCarrinho.find(item => item.id === idRep)){
         countMap[idRep] = (countMap[idRep] || 0) + 1
       }
     })
